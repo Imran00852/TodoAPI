@@ -34,5 +34,11 @@ app.listen(process.env.PORT, () => {
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
 
+app.get("/",(req,res)=>{
+  res.json({
+    message:"Welcome."
+  })
+})
+
 // error middleware
 app.use(errorMiddleware);

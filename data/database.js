@@ -6,8 +6,8 @@ export const connectDB = async () => {
     .connect(process.env.MONGO_URI, {
       dbName: "TodoDB",
     })
-    .then(() => {
-      console.log("Connected to DB");
+    .then((c) => {
+      console.log(c.connection.host);
     })
     .catch((err) => {
       console.log(err);
